@@ -1,0 +1,14 @@
+.title {
+	display: flex;
+	justify-content: center;
+	font-size: 44px;
+	font-weight: 500;
+}
+
+.title span {
+	background: linear-gradient(90.64deg, #C80F0F 50%, #FDC9C9 77.15%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	margin: 0 15px;
+}

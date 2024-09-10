@@ -1,0 +1,22 @@
+.popular {
+	position: relative;
+	padding: 76px 112px;
+	z-index: 10;
+}
+
+.title {
+	max-width: 375px;
+	font-size: 44px;
+	font-weight: 500;
+	border-bottom: 1px solid;
+	border-image-source: linear-gradient(90deg, #C80F0F 1.01%, #FFFFFF 112.19%);
+}
+
+.descr {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.swiperCustom {
+	margin-top: 40px;
+}

@@ -1,0 +1,29 @@
+.content { 
+	background-image: url('../../assets/background.png');
+	background-repeat: no-repeat;
+	background-position: top;
+	padding: 41px 32px 100px 32px;
+	margin-left: 80px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 26px;
+	width: 530px;
+}
+
+.title {
+	font-weight: 600;
+	font-size: 60px;
+	color: var(--textMain);
+}
+
+.getStarter {
+	width: max-content;
+	font-weight: 600; font-size: 14px;
+	color: var(--textMain); background-color: var(--mainBtn);
+	border: none; border-radius: 100px;
+	padding: 12px 74px;
+	cursor: pointer;
+}

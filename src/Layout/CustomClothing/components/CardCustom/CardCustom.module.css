@@ -1,0 +1,23 @@
+.title {
+	font-size: 22px;
+	font-weight: 500;
+}
+
+.descr {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.customCard {
+	display: flex;
+	justify-content: space-evenly;
+	gap: 34px;
+	max-width: 900px;
+	margin: 32px auto 32px auto;
+}
+
+.wrapper {
+	display: flex;
+	gap: 16px;
+	min-width: 440px;
+}

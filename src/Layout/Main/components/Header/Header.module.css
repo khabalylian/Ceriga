@@ -1,0 +1,31 @@
+.header {
+	display: flex;
+	background-color: var(--headerMain);
+	padding: 0 32px;
+	margin-left: 80px;
+}
+
+.content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.vertLine {
+	width: 1px;
+	height: 40px;
+	background-color: var(--vertLineHeader);
+	margin: 8px 16px;
+}
+
+.user {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	min-width: max-content;
+}
+
+.userName {
+	color: white;
+}
