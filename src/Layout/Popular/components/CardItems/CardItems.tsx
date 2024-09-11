@@ -1,17 +1,20 @@
-import React from 'react'
+import React, { DetailedHTMLProps, HTMLAttributes, InputHTMLAttributes } from 'react'
 import styles from './CardItems.module.css'
 import Image, { StaticImageData } from 'next/image'
 
-interface ICardItems {
+interface ICardItems extends DetailedHTMLProps<
+		HTMLAttributes<HTMLDivElement>,
+		HTMLDivElement
+	> {
 	type: string;
 	article: string;
 	sizes: number;
 	image: StaticImageData;
 }
 
-const CardItems = ({type, article, sizes, image}: ICardItems) => {
+const CardItems = ({type, article, sizes, image, ...props}: ICardItems,) => {
   return (
-	<div className={styles.cardItems}>
+	<div className={styles.cardItems} {...props}>
 		<div className={styles.typeBox}>
 			<span className={styles.type}>
 				{type}
