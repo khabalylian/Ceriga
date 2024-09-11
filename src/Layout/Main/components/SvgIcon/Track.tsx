@@ -2,7 +2,7 @@ import React from 'react'
 
 const Track = () => {
   return (
-	<div style={{cursor: 'pointer'}}><svg
+	<div style={{cursor: 'pointer', display: 'flex'}}><svg
 		width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<path d="M16 3H1V16H16V3Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
 		<path d="M16 8H20L23 11V16H16V8Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>

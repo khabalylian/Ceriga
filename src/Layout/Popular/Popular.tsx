@@ -3,14 +3,16 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Autoplay, EffectFade, Navigation, Pagination, Scrollbar } from 'swiper/modules';
 
-import tshirt from './assets/tshirt.png';
-import 'swiper/css';
-
-import styles from './Popular.module.css'
+import { IData } from '@/interface';
 import CardItems from './components/CardItems/CardItems';
+
+import tshirt from './assets/tshirt.png';
 import { ArrowNext, ArrowPrev } from './components/SvgIcons/ArrowSvg';
 
-const DATA = [
+import styles from './Popular.module.css'
+import 'swiper/css';
+
+const DATA: IData[] = [
 	{type: 'basic tshirt', sizes: 9, article: 'MOQ - 1000', image: tshirt},
 	{type: 'basic tshirt', sizes: 7, article: 'MOQ - 1000', image: tshirt},
 	{type: 'basic tshirt', sizes: 5, article: 'MOQ - 1000', image: tshirt},

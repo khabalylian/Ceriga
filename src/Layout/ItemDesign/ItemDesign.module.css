@@ -1,0 +1,11 @@
+.itemDesign {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 32px;
+}
+
+.title {
+	width: 300px;
+	font-size: 44px;
+	font-weight: 500;
+}

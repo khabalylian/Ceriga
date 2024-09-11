@@ -10,7 +10,6 @@ const Main = () => {
   return (
 	<div style={{position: 'relative', zIndex: '100'}}>
 		<Header/>
-		<MainContent/>
 		<SideMenu/>
 	</div>
   )

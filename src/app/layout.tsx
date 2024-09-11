@@ -21,10 +21,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Main/>
-		<CustomClothing/>
-		<Popular/>
-		<AddInform/>
+		<Main/>
+		{children}
       </body>
     </html>
   );

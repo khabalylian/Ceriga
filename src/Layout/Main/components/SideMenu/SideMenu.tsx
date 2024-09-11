@@ -6,14 +6,18 @@ import BoxSvg from '../SvgIcon/BoxSvg';
 import TShirtSvg from '../SvgIcon/TShirtSvg';
 import EditSvg from '../SvgIcon/EditSvg';
 import Track from '../SvgIcon/Track';
-import Credit from '../SvgIcon/credit';
+import Credit from '../SvgIcon/Credit';
 
 import styles from './SideMenu.module.css';
 import Logo from '../SvgIcon/LogoSvg';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 const SideMenu = () => {
 	const [checkOpenMenu, setCheckOpenMenu] = useState<boolean>(false);
 
+	const router = usePathname();
+  
 	const openMenu = () => {
 		setCheckOpenMenu(true);
 	}
@@ -37,18 +41,22 @@ const SideMenu = () => {
 			<div className={cn(styles.sideMenuContent, {
 				[styles.animateContentMenu]: checkOpenMenu
 			})}>
-				<div className={styles.menuTextBox}>
+				<Link href='/' className={cn(styles.menuTextBox, {
+					[styles.activeLink]: router === '/'
+				})}>
 					<BoxSvg/>
 					<p className={cn(styles.menuText, {
-						[styles.animateMenu]: checkOpenMenu
+						[styles.animateMenu]: checkOpenMenu,
 					})}>Dashboard</p>
-				</div>
-				<div className={styles.menuTextBox}>
+				</Link>
+				<Link href='/design' className={cn(styles.menuTextBox, {
+					[styles.activeLink]: router === '/design'
+				})}>
 					<TShirtSvg/>
 					<p className={cn(styles.menuText, {
-						[styles.animateMenu]: openMenu
+						[styles.animateMenu]: openMenu,
 					})}>Catalog</p>
-				</div>
+				</Link>
 				<div className={styles.menuTextBox}>
 					<EditSvg/>
 					<p className={cn(styles.menuText, {
