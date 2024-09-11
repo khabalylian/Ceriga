@@ -20,3 +20,13 @@
 .swiperCustom {
 	margin-top: 40px;
 }
+
+.swiper {
+	position: relative;
+}
+
+.swiper-button-prev {
+	position: absolute;
+	left: 0;
+	top: 50%;
+}

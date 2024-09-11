@@ -19,7 +19,7 @@ const CustomClothing = () => {
   return (
 	<div className={styles.customClothing}>
 		<h2 className={styles.title}>HOW TO DESIGN <span>CUSTOM</span> CLOTHING</h2>
-		{DATA.map(item => <CardCustom reverse={item.reverse} image={item.imgage} descr={item.descr} Icon={item.icon} title={item.title}/>)}
+		{DATA.map(item => <CardCustom key={item.title} reverse={item.reverse} image={item.imgage} descr={item.descr} Icon={item.icon} title={item.title}/>)}
 	</div>
   )
 }

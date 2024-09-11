@@ -1,0 +1,12 @@
+.addInfo {
+	background-image: url('./assets/background.png');
+	background-repeat: no-repeat;
+	background-position: 20% 100%;
+	padding: 76px 112px 135px 112px;
+}
+
+.title {
+	max-width: 357px;
+	font-size: 44px;
+	font-weight: 500;
+}

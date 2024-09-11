@@ -8,6 +8,7 @@ import 'swiper/css';
 
 import styles from './Popular.module.css'
 import CardItems from './components/CardItems/CardItems';
+import { ArrowNext, ArrowPrev } from './components/SvgIcons/ArrowSvg';
 
 const DATA = [
 	{type: 'basic tshirt', sizes: 9, article: 'MOQ - 1000', image: tshirt},
@@ -25,23 +26,28 @@ const Popular = () => {
 			Represent your brand and vision with the
 			highest quality blanks in the industry
 		</p>
-		
 		<Swiper
 			modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade]}
 			direction="horizontal" // Налаштування напрямку слайдів
 			spaceBetween={30}
 			slidesPerView={4}
 			pagination={{ clickable: true }}
-			navigation
+			navigation={{
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			}}
 			scrollbar={{ draggable: true }} 
 			onSlideChange={() => console.log('slide change')}
 			onSwiper={(swiper) => console.log(swiper)}
+			className={styles.swiper}
 			>
 				{DATA.map(item => (
-					<SwiperSlide className={styles.swiperCustom}>
+					<SwiperSlide key={item.article} className={styles.swiperCustom}>
 						<CardItems type={item.type} sizes={item.sizes} image={item.image} article={item.article}/>
 					</SwiperSlide>
 				))}
+				<div style={{position: 'absolute', left: 0, top: '50%', zIndex: 15}} className='swiper-button-prev'><ArrowPrev/></div>
+				<div style={{position: 'absolute', right: 0, top: '50%', zIndex: 15}} className='swiper-button-next'><ArrowNext/></div>
 		</Swiper>
 	</div>
   )

@@ -21,7 +21,7 @@ const CardItems = ({type, article, sizes, image}: ICardItems) => {
 			</p>
 		</div>
 		<span className={styles.sizes}>{sizes} sizes</span>
-		<Image src={image} alt='photoCard'/>
+		<Image className={styles.image} src={image} alt='photoCard'/>
 	</div>
   )
 }
